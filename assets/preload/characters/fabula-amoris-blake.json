@@ -1,0 +1,145 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				547,
+				225
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				520,
+				227
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				500,
+				254
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				464,
+				252
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				536,
+				242
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				536,
+				244
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				547,
+				225
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "Left",
+			"indices": [
+				1,
+				2
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				466,
+				252
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Right",
+			"indices": [
+				2,
+				3
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				500,
+				254
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Up",
+			"indices": [
+				3,
+				2
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				520,
+				227
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "Down",
+			"indices": [
+				2,
+				3
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/FabulaAmorisBlake",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "fablake",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.25
+}

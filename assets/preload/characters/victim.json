@@ -1,0 +1,145 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1903,
+				233
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1211,
+				-245
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				511,
+				330
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1279,
+				183
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				346,
+				332
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				346,
+				332
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				1903,
+				233
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				1,
+				2
+			],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				1279,
+				183
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				1,
+				2
+			],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				511,
+				330
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				1,
+				2
+			],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				1211,
+				-245
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				1,
+				2
+			],
+			"name": "Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Victim",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "victim",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		33,
+		23
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

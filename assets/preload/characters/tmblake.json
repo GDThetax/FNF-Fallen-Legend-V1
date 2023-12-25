@@ -1,0 +1,189 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				598,
+				349
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				390,
+				218
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				592,
+				331
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				590,
+				341
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				580,
+				312
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "LMISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				651,
+				293
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "DMISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				625,
+				340
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "UMISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				602,
+				430
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "RMISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				736,
+				292
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				736,
+				292
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				598,
+				349
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Left",
+			"indices": [
+				2,
+				3
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				590,
+				341
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "Right",
+			"indices": [
+				2,
+				3
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				592,
+				331
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Up",
+			"indices": [
+				2,
+				3
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				390,
+				218
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "Down",
+			"indices": [
+				2,
+				3
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/TMBlakeLower",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "tmblake",
+	"flip_x": true,
+	"healthbar_colors": [
+		118,
+		255,
+		63
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,17 @@
+{
+	"songs": [
+		[
+			"Disconsolate"
+		],
+		[
+			"Anamnesis"
+		],
+		[
+			"Emotional Restoration"
+		]
+	],
+	"actImage": "Act-1-StoryImage",
+	"actName": "Act 1",
+	"actMessage": "grief over the loss of peace",
+	"startUnlocked": true
+}

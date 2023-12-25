@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MenuButtonsFaded.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="story_unselected0000" x="0" y="0" width="1513.5" height="234"/>
+	<SubTexture name="story_selected0000" x="1513.5" y="0" width="1513.5" height="234"/>
+	<SubTexture name="freeplay_unselected0000" x="0" y="234" width="1513.5" height="234"/>
+	<SubTexture name="freeplay_selected0000" x="1513.5" y="234" width="1513.5" height="234"/>
+	<SubTexture name="options_unselected0000" x="0" y="486" width="1513.5" height="228"/>
+	<SubTexture name="options_selected0000" x="1513.5" y="486" width="1513.5" height="228"/>
+	<SubTexture name="credits_unselected0000" x="0" y="702" width="1513.5" height="234"/>
+	<SubTexture name="credits_selected0000" x="1513.5" y="702" width="1513.5" height="234"/>
+</TextureAtlas>

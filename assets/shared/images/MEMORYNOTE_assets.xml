@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MEMORYNOTE_assets.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="red hold end0000" x="0" y="0" width="55" height="69"/>
+	<SubTexture name="red hold piece0000" x="55" y="0" width="55" height="48"/>
+	<SubTexture name="green hold end0000" x="110" y="0" width="54" height="69"/>
+	<SubTexture name="green hold piece0000" x="164" y="0" width="54" height="48"/>
+	<SubTexture name="blue hold end0000" x="218" y="0" width="54" height="69"/>
+	<SubTexture name="blue hold piece0000" x="272" y="0" width="54" height="48"/>
+	<SubTexture name="pruple end hold0000" x="326" y="0" width="55" height="69"/>
+	<SubTexture name="purple hold piece0000" x="381" y="0" width="55" height="48"/>
+	<SubTexture name="red0000" x="0" y="69" width="158" height="162"/>
+	<SubTexture name="green0000" x="158" y="69" width="162" height="159"/>
+	<SubTexture name="blue0000" x="320" y="69" width="162" height="159"/>
+	<SubTexture name="purple0000" x="0" y="231" width="159" height="162"/>
+</TextureAtlas>

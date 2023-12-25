@@ -1,0 +1,14 @@
+{
+	"songs": [
+		["True Love"],
+		["Traumatophobia"],
+		["Insanity Virus"]
+	],
+
+	"actImage": "Act-2-StoryImage",
+
+	"actName": "Act 2",
+	"actMessage": "the untold stories",
+	"startUnlocked": false,
+	"weekBefore": "Act_1"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GameplayClaws.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="b10000" x="0" y="0" width="506" height="442"/>
+    <SubTexture name="b20000" x="506" y="0" width="506" height="442"/>
+    <SubTexture name="b30000" x="1012" y="0" width="506" height="442"/>
+    <SubTexture name="b40000" x="1518" y="0" width="506" height="442"/>
+    <SubTexture name="b50000" x="2024" y="0" width="506" height="442"/>
+    <SubTexture name="b60000" x="0" y="442" width="506" height="442"/>
+    <SubTexture name="s10000" x="506" y="442" width="506" height="442"/>
+    <SubTexture name="s20000" x="1012" y="442" width="506" height="442"/>
+    <SubTexture name="s30000" x="1518" y="442" width="506" height="442"/>
+    <SubTexture name="s40000" x="2024" y="442" width="506" height="442"/>
+    <SubTexture name="s50000" x="0" y="884" width="506" height="442"/>
+    <SubTexture name="s60000" x="506" y="884" width="506" height="442"/>
+</TextureAtlas>

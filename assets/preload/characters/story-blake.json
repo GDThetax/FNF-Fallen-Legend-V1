@@ -1,0 +1,171 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				188,
+				241
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				447,
+				233
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				353,
+				346
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				198,
+				384
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				506,
+				304
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				506,
+				304
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				187,
+				242
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				199,
+				384
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				353,
+				345
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				448,
+				235
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				384,
+				285
+			],
+			"loop": true,
+			"anim": "idle-sit",
+			"fps": 24,
+			"name": "sitting",
+			"indices": []
+		},
+		{
+			"offsets": [
+				499,
+				4
+			],
+			"loop": true,
+			"anim": "idle-scream",
+			"fps": 24,
+			"name": "scream",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/StoryBlake",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "storyblake",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		142,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

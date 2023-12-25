@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="UPDATEDCommandPrompt.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cPrompt0000" x="0" y="0" width="385" height="302"/>
+	<SubTexture name="cPrompt0001" x="385" y="0" width="385" height="302"/>
+	<SubTexture name="cPrompt0002" x="770" y="0" width="385" height="302"/>
+	<SubTexture name="cPrompt0003" x="1155" y="0" width="385" height="302"/>
+	<SubTexture name="cPrompt0004" x="1540" y="0" width="385" height="302"/>
+	<SubTexture name="cPrompt0005" x="0" y="302" width="385" height="302"/>
+	<SubTexture name="cPrompt0006" x="385" y="302" width="385" height="302"/>
+	<SubTexture name="cPrompt0007" x="770" y="302" width="385" height="302"/>
+	<SubTexture name="cPrompt0008" x="1155" y="302" width="385" height="302"/>
+	<SubTexture name="cPrompt0009" x="1540" y="302" width="385" height="302"/>
+	<SubTexture name="cPrompt0010" x="0" y="604" width="385" height="302"/>
+	<SubTexture name="cPrompt0011" x="385" y="604" width="385" height="302"/>
+	<SubTexture name="cPrompt0012" x="770" y="604" width="385" height="302"/>
+	<SubTexture name="cPrompt0013" x="1155" y="604" width="385" height="302"/>
+	<SubTexture name="cPrompt0014" x="1540" y="604" width="385" height="302"/>
+	<SubTexture name="cPrompt0015" x="0" y="906" width="385" height="302"/>
+	<SubTexture name="cPrompt0016" x="385" y="906" width="385" height="302"/>
+	<SubTexture name="cPrompt0017" x="770" y="906" width="385" height="302"/>
+	<SubTexture name="cPrompt0018" x="1155" y="906" width="385" height="302"/>
+	<SubTexture name="cPrompt0019" x="1540" y="906" width="385" height="302"/>
+	<SubTexture name="cPrompt0020" x="0" y="1208" width="385" height="302"/>
+</TextureAtlas>

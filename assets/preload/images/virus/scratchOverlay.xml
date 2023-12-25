@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="scratchOverlay.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="smile0000" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="smile0001" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="smile0002" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="smile0003" x="3840" y="0" width="1280" height="720"/>
+	<SubTexture name="smile0004" x="5120" y="0" width="1280" height="720"/>
+	<SubTexture name="sophie0000" x="0" y="720" width="1280" height="720"/>
+	<SubTexture name="sophie0001" x="1280" y="720" width="1280" height="720"/>
+	<SubTexture name="sophie0002" x="2560" y="720" width="1280" height="720"/>
+	<SubTexture name="sophie0003" x="3840" y="720" width="1280" height="720"/>
+	<SubTexture name="sophie0004" x="5120" y="720" width="1280" height="720"/>
+	<SubTexture name="face0000" x="0" y="1440" width="1280" height="720"/>
+	<SubTexture name="face0001" x="1280" y="1440" width="1280" height="720"/>
+	<SubTexture name="face0002" x="2560" y="1440" width="1280" height="720"/>
+	<SubTexture name="face0003" x="3840" y="1440" width="1280" height="720"/>
+	<SubTexture name="face0004" x="5120" y="1440" width="1280" height="720"/>
+	<SubTexture name="knife0000" x="0" y="2160" width="1280" height="720"/>
+	<SubTexture name="knife0001" x="1280" y="2160" width="1280" height="720"/>
+	<SubTexture name="knife0002" x="2560" y="2160" width="1280" height="720"/>
+	<SubTexture name="knife0003" x="3840" y="2160" width="1280" height="720"/>
+	<SubTexture name="knife0004" x="5120" y="2160" width="1280" height="720"/>
+</TextureAtlas>
+
