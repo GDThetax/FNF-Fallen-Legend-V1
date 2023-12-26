@@ -315,6 +315,7 @@ class FreeplayStateNew extends MusicBeatState
 				{
 					FlxG.sound.play(Paths.sound('cancelMenu'), 0.5);
 					FlxG.camera.shake(0.005, 0.05);
+					preventSongScroll = false;
 				}
 			}
 			else if (controls.BACK)

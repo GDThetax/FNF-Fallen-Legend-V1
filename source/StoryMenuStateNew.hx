@@ -80,7 +80,7 @@ class StoryMenuStateNew extends MusicBeatState
 
 		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 15);
 		scoreText.setFormat("VCR OSD Mono", 15);
-		scoreText.x = FlxG.width - scoreText.width;
+		scoreText.x = FlxG.width - scoreText.width - 20;
 
 		actGroup = new FlxTypedGroup<MenuItem>();
 		add(actGroup);
