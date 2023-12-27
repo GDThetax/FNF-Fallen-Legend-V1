@@ -2951,7 +2951,7 @@ class PlayState extends MusicBeatState
 
 		if (traumaHealthDrainBool)
 		{
-			health -= 0.002;
+			health -= 0.002 * (60 / lime.app.Application.current.window.frameRate);
 		}
 
 		if (curStage == 'splitStory')
