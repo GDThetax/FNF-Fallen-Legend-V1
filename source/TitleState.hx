@@ -489,7 +489,7 @@ class TitleState extends MusicBeatState
 					FlxTween.tween(blackScreen, {alpha: 1}, 3, {
 						onComplete: function(fadeOn:FlxTween)
 						{
-							if (previousImageStorage != null)
+							if (previousImageStorage != null && !TitleImages.unlockedImages.contains(previousImageStorage))
 								TitleImages.unlockedImages.push(previousImageStorage);
 							FlxG.save.data.unlockedImages = TitleImages.unlockedImages;
 							previousImageStorage = null;
