@@ -402,7 +402,9 @@ class TitleState extends MusicBeatState
 			{
 				titleFlickerState[0] = titleFlickerState[1];
 				titleFlickerState[1] = 0;
+				returnState.destroy();
 			});
+			changeState.destroy();
 		});
 	}
 
