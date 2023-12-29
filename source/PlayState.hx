@@ -296,7 +296,7 @@ class PlayState extends MusicBeatState
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
-	public var cpuControlled:Bool = false;
+	public var cpuControlled:Bool = true;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
@@ -493,6 +493,11 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 		trace(SONG.song);
+
+		if (SONG.song == 'insanity-virus') {
+			FlxG.fullscreen = false;
+			lime.app.Application.current.window.fullscreen = false;
+		}
 
 		#if desktop
 		storyDifficultyText = CoolUtil.difficulties[storyDifficulty];

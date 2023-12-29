@@ -60,8 +60,10 @@ class Virus extends FlxSprite
 
 		removeTMR = new FlxTimer();
 
-		if (FlxG.fullscreen)
+		if (TitleState.fullScreenToggle)
 			toggleFullscreenFlash = false;
+		if (PlayState.SONG.song == 'insanity-virus')
+			toggleFullscreenFlash = true;
 
 		switch (formatToFileFormat(song))
 		{

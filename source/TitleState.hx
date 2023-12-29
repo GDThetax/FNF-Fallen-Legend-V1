@@ -94,6 +94,8 @@ class TitleState extends MusicBeatState
 	var previousImageStorage:Null<String> = null;
 	var moddedLogo:FlxSprite;
 
+	public static var fullScreenToggle:Bool = false;
+
 	var stopImages:Bool = false;
 
 	var fireEffectGradient:FlxSprite;
@@ -351,7 +353,6 @@ class TitleState extends MusicBeatState
 			staticEffect.y = new FlxRandom().float(-200.0, 200.0);
 		}, 0);
 
-		lime.app.Application.current.window.fullscreen = false;
 		trace(FlxG.camera.zoom);
 		lime.app.Application.current.window.onClose.add(saveCurrentImages);
 		// testSaw = new TraClaw(200, 100, 'saw distraction');
@@ -436,6 +437,7 @@ class TitleState extends MusicBeatState
 		if (FlxG.keys.justPressed.F)
 		{
 			FlxG.fullscreen ? FlxG.fullscreen = false : FlxG.fullscreen = true;
+			fullScreenToggle = !fullScreenToggle;
 		}
 	
 

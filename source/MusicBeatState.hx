@@ -95,7 +95,7 @@ class MusicBeatState extends FlxUIState
 		var curState:Dynamic = FlxG.state;
 		var leState:MusicBeatState = curState;
 		FlxG.game.setFilters([]);
-		lime.app.Application.current.window.fullscreen = false;
+		lime.app.Application.current.window.fullscreen = TitleState.fullScreenToggle;
 		if (resetFreeplau) {
 			FreeplayStateNew.selectedSong = 0;
 			FreeplayStateNew.selectedSegment = 0;
