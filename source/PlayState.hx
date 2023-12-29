@@ -4868,6 +4868,7 @@ class PlayState extends MusicBeatState
 					}
 					FlxG.save.data.actCompleted = StoryMenuStateNew.actCompleted;
 					StoryMenuStateNew.exitState = [['', '', ''], 0, 0];
+					FlxG.save.data.exitState = StoryMenuStateNew.exitState;
 					changedDifficulty = false;
 					switch (WeekData.weeksList[storyWeek])
 					{
