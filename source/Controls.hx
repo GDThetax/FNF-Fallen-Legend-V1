@@ -345,6 +345,130 @@ class Controls extends FlxActionSet
 	inline function get_RESET()
 		return _reset.check();
 
+
+
+	public var LEFT_LEFT(get, never):Bool;
+
+	inline function get_LEFT_LEFT()
+		return _left_left.check();
+
+	public var LEFT_DOWN(get, never):Bool;
+
+	inline function get_LEFT_DOWN()
+		return _left_down.check();
+
+	public var LEFT_UP(get, never):Bool;
+
+	inline function get_LEFT_UP()
+		return _left_up.check();
+
+	public var LEFT_RIGHT(get, never):Bool;
+
+	inline function get_LEFT_RIGHT()
+		return _left_right.check();
+
+	public var LEFT_LEFT_P(get, never):Bool;
+
+	inline function get_LEFT_LEFT_P()
+		return _left_leftP.check();
+
+	public var LEFT_DOWN_P(get, never):Bool;
+
+	inline function get_LEFT_DOWN_P()
+		return _left_downP.check();
+
+	public var LEFT_UP_P(get, never):Bool;
+
+	inline function get_LEFT_UP_P()
+		return _left_upP.check();
+
+	public var LEFT_RIGHT_P(get, never):Bool;
+
+	inline function get_LEFT_RIGHT_P()
+		return _left_rightP.check();
+
+	public var LEFT_LEFT_R(get, never):Bool;
+
+	inline function get_LEFT_LEFT_R()
+		return _left_leftR.check();
+
+	public var LEFT_DOWN_R(get, never):Bool;
+
+	inline function get_LEFT_DOWN_R()
+		return _left_downR.check();
+
+	public var LEFT_UP_R(get, never):Bool;
+
+	inline function get_LEFT_UP_R()
+		return _left_upR.check();
+
+	public var LEFT_RIGHT_R(get, never):Bool;
+
+	inline function get_LEFT_RIGHT_R()
+		return _left_rightR.check();
+
+	public var RIGHT_LEFT(get, never):Bool;
+
+	inline function get_RIGHT_LEFT()
+		return _right_left.check();
+
+	public var RIGHT_DOWN(get, never):Bool;
+
+	inline function get_RIGHT_DOWN()
+		return _right_down.check();
+
+	public var RIGHT_UP(get, never):Bool;
+
+	inline function get_RIGHT_UP()
+		return _right_up.check();
+
+	public var RIGHT_RIGHT(get, never):Bool;
+
+	inline function get_RIGHT_RIGHT()
+		return _right_right.check();
+
+	public var RIGHT_LEFT_P(get, never):Bool;
+
+	inline function get_RIGHT_LEFT_P()
+		return _right_leftP.check();
+
+	public var RIGHT_DOWN_P(get, never):Bool;
+
+	inline function get_RIGHT_DOWN_P()
+		return _right_downP.check();
+
+	public var RIGHT_UP_P(get, never):Bool;
+
+	inline function get_RIGHT_UP_P()
+		return _right_upP.check();
+
+	public var RIGHT_RIGHT_P(get, never):Bool;
+
+	inline function get_RIGHT_RIGHT_P()
+		return _right_rightP.check();
+
+	public var RIGHT_LEFT_R(get, never):Bool;
+
+	inline function get_RIGHT_LEFT_R()
+		return _right_leftR.check();
+
+	public var RIGHT_DOWN_R(get, never):Bool;
+
+	inline function get_RIGHT_DOWN_R()
+		return _right_downR.check();
+
+	public var RIGHT_UP_R(get, never):Bool;
+
+	inline function get_RIGHT_UP_R()
+		return _right_upR.check();
+
+	public var RIGHT_RIGHT_R(get, never):Bool;
+
+	inline function get_RIGHT_RIGHT_R()
+		return _right_rightR.check();
+
+
+
 	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
 	{

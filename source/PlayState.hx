@@ -171,6 +171,7 @@ class PlayState extends MusicBeatState
 	var lowerOppGroup:FlxSpriteGroup;
 	var primaryVertBarArray:Array<Int> = [];
 	var gradientOverlay:FlxSprite;
+	var toggleDouble:Bool = false;
 
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
@@ -4400,6 +4401,7 @@ class PlayState extends MusicBeatState
 				if (Std.parseInt(value1) == 1)
 				{
 					keysArray = doubleKeysArray;
+					toggleDouble = true;
 				}
 			case '[COM] Tween camera zoom':
 				FlxTween.tween(FlxG.camera, {zoom: Std.parseFloat(value1)}, Std.parseFloat(value2), {ease: FlxEase.sineInOut});
@@ -5352,11 +5354,27 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void
 	{
 		// HOLDING
-		var up = controls.NOTE_UP;
-		var right = controls.NOTE_RIGHT;
-		var down = controls.NOTE_DOWN;
-		var left = controls.NOTE_LEFT;
-		var controlHoldArray:Array<Bool> = [left, down, up, right];
+
+		var controlHoldArray:Array<Bool>;
+
+		if (!toggleDouble) {
+			var up = controls.NOTE_UP;
+			var right = controls.NOTE_RIGHT;
+			var down = controls.NOTE_DOWN;
+			var left = controls.NOTE_LEFT;
+			controlHoldArray = [left, down, up, right];
+		} else {
+			var leftUp = controls.LEFT_UP;
+			var leftRight = controls.LEFT_RIGHT;
+			var leftDown = controls.LEFT_DOWN;
+			var leftLeft = controls.LEFT_LEFT;
+			var rightUp = controls.RIGHT_UP;
+			var rightRight = controls.RIGHT_RIGHT;
+			var rightDown = controls.RIGHT_DOWN;
+			var rightLeft = controls.RIGHT_LEFT;
+			controlHoldArray = [rightLeft, rightDown, rightUp, rightRight, leftLeft, leftDown, leftUp, leftRight];
+		}
+
 
 		// TO DO: Find a better way to handle controller inputs, this should work for now
 		if (ClientPrefs.controllerMode)
