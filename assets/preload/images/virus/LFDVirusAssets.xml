@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LFDVirusAssets.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cheater0000" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="cheater+0000" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="failure0000" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="failure+0000" x="3840" y="0" width="1280" height="720"/>
+	<SubTexture name="ha0000" x="5120" y="0" width="1280" height="720"/>
+	<SubTexture name="ha+0000" x="6400" y="0" width="1280" height="720"/>
+	<SubTexture name="no-wonder-they-hate-you0000" x="0" y="720" width="1280" height="720"/>
+	<SubTexture name="no-wonder-they-hate-you+0000" x="1280" y="720" width="1280" height="720"/>
+	<SubTexture name="passion-towards-you-is-stupid0000" x="2560" y="720" width="1280" height="720"/>
+	<SubTexture name="passion-towards-you-is-stupid+0000" x="3840" y="720" width="1280" height="720"/>
+	<SubTexture name="pathetic0000" x="5120" y="720" width="1280" height="720"/>
+	<SubTexture name="pathetic+0000" x="6400" y="720" width="1280" height="720"/>
+	<SubTexture name="shes-using-you0000" x="0" y="1440" width="1280" height="720"/>
+	<SubTexture name="shes-using-you+0000" x="1280" y="1440" width="1280" height="720"/>
+	<SubTexture name="you-deserve-failure0000" x="2560" y="1440" width="1280" height="720"/>
+	<SubTexture name="you-deserve-failure+0000" x="3840" y="1440" width="1280" height="720"/>
+	<SubTexture name="youll-become-a-hated-format0000" x="5120" y="1440" width="1280" height="720"/>
+	<SubTexture name="youll-become-a-hated-format+0000" x="6400" y="1440" width="1280" height="720"/>
+	<SubTexture name="your-fans-are-childish0000" x="0" y="2160" width="1280" height="720"/>
+	<SubTexture name="your-fans-are-childish+0000" x="1280" y="2160" width="1280" height="720"/>
+	<SubTexture name="your-mods-will-be-a-humiliation0000" x="2560" y="2160" width="1280" height="720"/>
+	<SubTexture name="your-mods-will-be-a-humiliation+0000" x="3840" y="2160" width="1280" height="720"/>
+	<SubTexture name="your-songs-are-stupid0000" x="5120" y="2160" width="1280" height="720"/>
+	<SubTexture name="your-songs-are-stupid+0000" x="6400" y="2160" width="1280" height="720"/>
+	<SubTexture name="you-should-feel-ashamed-for-liking-this0000" x="0" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-should-feel-ashamed-for-liking-this+0000" x="1280" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-wanted-them-to-feel-pain+0000" x="1280" y="3600" width="1280" height="720"/>
+	<SubTexture name="blank0000" x="2560" y="3600" width="1280" height="720"/>
+</TextureAtlas>

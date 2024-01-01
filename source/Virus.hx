@@ -26,28 +26,36 @@ class Virus extends FlxSprite
 	public static var forRandomMessage:Array<String> = [
 		'cheater',
 		'ha',
-		'no wonder they hate you',
-		'passion towards you is stupid',
+		'failure',
+		'no-wonder-they-hate-you',
+		'passion-towards-you-is-stupid',
 		'pathetic',
-		'shes using you',
-		'you deserve failure',
-		'youll become a hated format',
-		'your fans are childish',
-		'your mods will be a humiliation',
-		'your songs are stupid',
-		'you should feel ashamed for liking this',
-		'cheater+',
-		'ha+',
-		'no wonder they hate you+',
-		'passion towards you is stupid+',
-		'pathetic+',
-		'shes using you+',
-		'you deserve failure+',
-		'youll become a hated format+',
-		'your fans are childish+',
-		'your mods will be a humiliation+',
-		'your songs are stupid+',
-		'you should feel ashamed for liking this+'
+		'shes-using-you',
+		'you-deserve-failure',
+		'youll-become-a-hated-format',
+		'your-fans-are-childish',
+		'your-mods-will-be-a-humiliation',
+		'your-songs-are-stupid',
+		'you-should-feel-ashamed-for-liking-this',
+	];
+
+	var IVMessageList:Array<String> = [
+		'coward',
+		'failure',
+		'give-up-cleaning-your-mess',
+		'ha',
+		'it-was-never-a-mistake',
+		'never-forget-your-sin',
+		'not-yet',
+		'pathetic',
+		'run-away-like-you-always-do',
+		'selfish',
+		'she-never-truly-loved-you',
+		'she-stayed-with-you-out-of-pity',
+		'you-hated-them',
+		'you-never-deserved-her',
+		'your-fault',
+		'you-wanted-them-to-feel-pain'
 	];
 
 	public function new(x:Float, y:Float, message:String = '', song:String = '', ?transition:Bool = false, ?random:Bool = false)
@@ -68,38 +76,56 @@ class Virus extends FlxSprite
 		switch (formatToFileFormat(song))
 		{
 			case 'insanity-virus':
-				this.songPath = 'IV';
+				this.songPath = 'IVVirusAssets';
 			case 'left-for-dead':
-				this.songPath = 'SF';
+				this.songPath = 'LFDVirusAssets';
 			default:
-				this.songPath = 'IV';
+				this.songPath = 'IVVirusAssets';
 		}
 		antialiasing = ClientPrefs.globalAntialiasing;
 		if (!transition)
 		{
-			alpha = 0.0001;
+			frames = Paths.getSparrowAtlas('virus/' + songPath);
+			switch (formatToFileFormat(song)) {
+				case 'insanity-virus':
+					for (i in 0...IVMessageList.length) {
+						animation.addByPrefix(IVMessageList[i], IVMessageList[i], 24, false);
+					}
+					for (i in 0...IVMessageList.length) {
+						animation.addByPrefix(IVMessageList[i] + '+', IVMessageList[i] + '+', 24, false);
+					}
+				case 'left-for-dead':
+					for (i in 0...forRandomMessage.length) {
+						animation.addByPrefix(forRandomMessage[i], forRandomMessage[i], 24, false);
+					}
+					for (i in 0...forRandomMessage.length) {
+						animation.addByPrefix(forRandomMessage[i] + '+', forRandomMessage[i] + '+', 24, false);
+					}
+			}
+
+			animation.addByPrefix('blank', 'blank', 24, false);
+			animation.play('blank');
 		}
 		else
 		{
-			frames = Paths.getSparrowAtlas('virus/' + songPath + '/' + message);
+			frames = Paths.getSparrowAtlas('virus/' + message);
 			animation.addByPrefix('body', 'transition', 24, false);
 		}
 	}
 
 	public function virusFlash(message:String, randomMes:Bool)
 	{
-		loadGraphic(Paths.image('virus/' + songPath + '/' + formatToFileFormat(randomMes ? forRandomMessage[FlxG.random.int(0, 23)] : message)));
+		animation.play(formatToFileFormat(randomMes ? forRandomMessage[FlxG.random.int(0, 12)] : message));
 		if (toggleFullscreenFlash)
 			lime.app.Application.current.window.fullscreen = true;
 		flashSFX.play(true);
-		alpha = 1;
 		removeTMR.start(0.05, destroyImage);
 	}
 
 	function destroyImage(timer:FlxTimer):Void
 	{
 		flashSFX.stop();
-		alpha = 0.0001;
+		animation.play("blank");
 		if (toggleFullscreenFlash)
 			lime.app.Application.current.window.fullscreen = false;
 	}

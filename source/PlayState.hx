@@ -78,10 +78,7 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
-	var stagePosition:Float;
-	var stageWidth:Float;
-	var stageHeight:Float;
-	var stageY:Float;
+	var stageDimensions:Array<Float> = [];
 	var anamnesisBlackScreen:FlxSprite;
 	var secondaryBlackScreen:FlxSprite;
 	var memoryMessage:CustomAlphabets;
@@ -297,7 +294,7 @@ class PlayState extends MusicBeatState
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
-	public var cpuControlled:Bool = false;
+	public var cpuControlled:Bool = true;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
@@ -495,7 +492,8 @@ class PlayState extends MusicBeatState
 		Conductor.changeBPM(SONG.bpm);
 		trace(SONG.song);
 
-		if (SONG.song == 'insanity-virus') {
+		if (SONG.song == 'insanity-virus')
+		{
 			FlxG.fullscreen = false;
 			lime.app.Application.current.window.fullscreen = false;
 		}
@@ -602,11 +600,13 @@ class PlayState extends MusicBeatState
 				alleyBG.scale.set(0.5, 0.5);
 				alleyBG.updateHitbox();
 				stageSwitchBackgroundGroup.add(alleyBG);
+				stageDimensions = [-500, -150, alleyBG.width, alleyBG.height];
 			case 'apartment':
 				var apartBG:BGSprite = new BGSprite('apartment', -28, -198, 1, 1);
 				apartBG.scale.set(0.5, 0.5);
 				apartBG.updateHitbox();
 				add(apartBG);
+				stageDimensions = [-28, -198, apartBG.width, apartBG.height];
 			case 'myworld':
 				var skyline:BGSprite = new BGSprite('MYWORLD/skyBack', -500, -200, 1, 1);
 				skyline.scale.set(0.5, 0.5);
@@ -618,7 +618,7 @@ class PlayState extends MusicBeatState
 				add(screenBack);
 				for (i in 0...4)
 				{
-					var virusScreen:BGSprite = new BGSprite('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 23)]), 247, 424,
+					var virusScreen:BGSprite = new BGSprite('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 12)]), 247, 424,
 						1, 1);
 					virusScreen.scale.set(645 / 1280, 372 / 720);
 					virusScreen.updateHitbox();
@@ -641,7 +641,7 @@ class PlayState extends MusicBeatState
 						new FlxTimer().start(0.05, function(removeFlash:FlxTimer)
 						{
 							virusScreen.alpha = 0.0001;
-							virusScreen.loadGraphic(Paths.image('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 23)])));
+							virusScreen.loadGraphic(Paths.image('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 12)])));
 						});
 					}, 0);
 				}
@@ -653,7 +653,7 @@ class PlayState extends MusicBeatState
 				signPost.scale.set(0.5, 0.5);
 				signPost.updateHitbox();
 				add(signPost);
-				var postVirus:BGSprite = new BGSprite('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 23)]), 1190.5, 237.6,
+				var postVirus:BGSprite = new BGSprite('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 12)]), 1190.5, 237.6,
 					1.5, 1.5);
 				postVirus.scale.set(579 / 1280, 325.6875 / 720);
 				postVirus.updateHitbox();
@@ -665,7 +665,7 @@ class PlayState extends MusicBeatState
 					new FlxTimer().start(0.05, function(removeFlash:FlxTimer)
 					{
 						postVirus.alpha = 0.0001;
-						postVirus.loadGraphic(Paths.image('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 23)])));
+						postVirus.loadGraphic(Paths.image('virus/SF/' + Virus.formatToFileFormat(Virus.forRandomMessage[FlxG.random.int(0, 12)])));
 					});
 				}, 0);
 			case 'peace':
@@ -725,9 +725,7 @@ class PlayState extends MusicBeatState
 		anamnesisBlackScreen.alpha = 0.0001;
 		add(anamnesisBlackScreen);
 
-		secondaryBlackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		secondaryBlackScreen.x = stagePosition;
-		secondaryBlackScreen.y = stageY;
+		secondaryBlackScreen = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		secondaryBlackScreen.alpha = 0.0001;
 		secondaryBlackScreen.camera = camHUD;
 		add(secondaryBlackScreen);
@@ -1200,7 +1198,8 @@ class PlayState extends MusicBeatState
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
 
-		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, (SONG.song == 'insanity-virus' ? Std.int((timeBarBG.width - 8) / 0.5736) : Std.int(timeBarBG.width - 8)), Std.int(timeBarBG.height - 8), this,
+		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT,
+			(SONG.song == 'insanity-virus' ? Std.int((timeBarBG.width - 8) / 0.5736) : Std.int(timeBarBG.width - 8)), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
 		timeBar.createFilledBar(FlxColor.TRANSPARENT, 0xFFFFFFFF);
@@ -1480,7 +1479,7 @@ class PlayState extends MusicBeatState
 						new FlxTimer().start(0.2, function(resetToAlley:FlxTimer)
 						{
 							changeStageMidway("alley");
-	
+
 							new FlxTimer().start(0.2, function(strCou:FlxTimer)
 							{
 								startStoryDialogue(daSong);
@@ -1537,8 +1536,9 @@ class PlayState extends MusicBeatState
 						});
 					});
 				});
-			} else
-			startCountdown();
+			}
+			else
+				startCountdown();
 		}
 		RecalculateRating();
 
@@ -1745,7 +1745,7 @@ class PlayState extends MusicBeatState
 				add(knifeTransition);
 
 				IVVirusTransitionAnim = new FlxSprite();
-				IVVirusTransitionAnim.frames = Paths.getSparrowAtlas("virus/IV/transition-bodies_2");
+				IVVirusTransitionAnim.frames = Paths.getSparrowAtlas("virus/transition-bodies_2");
 				IVVirusTransitionAnim.animation.addByPrefix("Transition", "scared", 24, false);
 				IVVirusTransitionAnim.animation.play("Transition", true);
 				IVVirusTransitionAnim.cameras = [camOther];
@@ -2075,7 +2075,8 @@ class PlayState extends MusicBeatState
 
 	public static var startOnTime:Float = 0;
 
-	function startStoryDialogue(songName:String) {
+	function startStoryDialogue(songName:String)
+	{
 		#if desktop
 		if (sys.FileSystem.exists(Paths.dialogue(songName + "/dialogue")))
 		{
@@ -3250,7 +3251,7 @@ class PlayState extends MusicBeatState
 		/*if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
 		{
 			openChartEditor();
-		}*/
+	}*/
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -3298,7 +3299,7 @@ class PlayState extends MusicBeatState
 				vocals.pause();
 			}
 			MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
-		}*/
+	}*/
 
 		if (startingSong)
 		{
@@ -4180,7 +4181,7 @@ class PlayState extends MusicBeatState
 						});
 					}
 				});
-				new FlxTimer().start(FlxG.random.float(0.01, 0.5), function(addWord:FlxTimer)
+				new FlxTimer().start(FlxG.random.float(0.1, 1), function(addWord:FlxTimer)
 				{
 					if (AnamnesisEffectToggle)
 					{
@@ -4188,8 +4189,8 @@ class PlayState extends MusicBeatState
 						var word:CustomAlphabets = new CustomAlphabets(0, 0, MemoryAnamnesis.anamnesisWords[selectedWord][0], "scratch",
 							MemoryAnamnesis.checkAlternative(MemoryAnamnesis.anamnesisWords[selectedWord][1]), FlxG.random.float(0.1, 1));
 						word.antialiasing = ClientPrefs.globalAntialiasing;
-						word.x += FlxG.random.float(-350, 2410);
-						word.y += FlxG.random.float(-200, 1500);
+						word.x += FlxG.random.float(stageDimensions[0] - 50, stageDimensions[2] - 50);
+						word.y +=FlxG.random.float(stageDimensions[1] - 25, stageDimensions[3] - 25);
 						word.alpha = 0;
 						add(word);
 						FlxTween.tween(word, {alpha: 1}, 0.25, {
@@ -4481,7 +4482,8 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(FlxG.camera, {zoom: 0.35}, 1);
 					defaultCamZoom = 0.35;
 					isCameraOnForcedPos = false;
-					if (changeCam) {
+					if (changeCam)
+					{
 						camFollow.x = cityBG.getGraphicMidpoint().x;
 						camFollow.y = cityBG.getGraphicMidpoint().y + 100;
 					}
@@ -4823,7 +4825,6 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					
 					// FlxG.sound.music.fadeIn(5, 0, 1);
 
 					cancelMusicFadeTween();
@@ -4858,7 +4859,8 @@ class PlayState extends MusicBeatState
 							});
 						});
 					}
-					else {
+					else
+					{
 						FlxG.sound.playMusic(Paths.music('TIORemix'));
 						MusicBeatState.switchState(new StoryMenuStateNew());
 					}
@@ -5357,13 +5359,16 @@ class PlayState extends MusicBeatState
 
 		var controlHoldArray:Array<Bool>;
 
-		if (!toggleDouble) {
+		if (!toggleDouble)
+		{
 			var up = controls.NOTE_UP;
 			var right = controls.NOTE_RIGHT;
 			var down = controls.NOTE_DOWN;
 			var left = controls.NOTE_LEFT;
 			controlHoldArray = [left, down, up, right];
-		} else {
+		}
+		else
+		{
 			var leftUp = controls.LEFT_UP;
 			var leftRight = controls.LEFT_RIGHT;
 			var leftDown = controls.LEFT_DOWN;
@@ -5374,7 +5379,6 @@ class PlayState extends MusicBeatState
 			var rightLeft = controls.RIGHT_LEFT;
 			controlHoldArray = [rightLeft, rightDown, rightUp, rightRight, leftLeft, leftDown, leftUp, leftRight];
 		}
-
 
 		// TO DO: Find a better way to handle controller inputs, this should work for now
 		if (ClientPrefs.controllerMode)
@@ -5895,13 +5899,11 @@ class PlayState extends MusicBeatState
 			{
 				if (SONG.song == 'fabula-amoris')
 				{
-					doubleStrums.forEach(function(spr:StrumNote)
-					{
-						if (Math.abs(note.noteData) == spr.ID)
-						{
-							spr.playAnim('confirm', true);
+					for (i in 0...doubleStrums.members.length) {
+						if (Math.abs(note.noteData) == i) {
+							doubleStrums.members[i].playAnim('confirm', true);
 						}
-					});
+					}
 				}
 				else
 				{

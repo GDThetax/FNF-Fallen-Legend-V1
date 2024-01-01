@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="IVVirusAssets.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="coward0000" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="coward+0000" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="failure0000" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="failure+0000" x="3840" y="0" width="1280" height="720"/>
+	<SubTexture name="give-up-cleaning-your-mess0000" x="5120" y="0" width="1280" height="720"/>
+	<SubTexture name="give-up-cleaning-your-mess+0000" x="6400" y="0" width="1280" height="720"/>
+	<SubTexture name="ha0000" x="0" y="720" width="1280" height="720"/>
+	<SubTexture name="ha+0000" x="1280" y="720" width="1280" height="720"/>
+	<SubTexture name="it-was-never-a-mistake0000" x="2560" y="720" width="1280" height="720"/>
+	<SubTexture name="it-was-never-a-mistake+0000" x="3840" y="720" width="1280" height="720"/>
+	<SubTexture name="never-forget-your-sin0000" x="5120" y="720" width="1280" height="720"/>
+	<SubTexture name="never-forget-your-sin+0000" x="6400" y="720" width="1280" height="720"/>
+	<SubTexture name="not-yet0000" x="0" y="1440" width="1280" height="720"/>
+	<SubTexture name="not-yet+0000" x="1280" y="1440" width="1280" height="720"/>
+	<SubTexture name="pathetic0000" x="2560" y="1440" width="1280" height="720"/>
+	<SubTexture name="pathetic+0000" x="3840" y="1440" width="1280" height="720"/>
+	<SubTexture name="run-away-like-you-always-do0000" x="5120" y="1440" width="1280" height="720"/>
+	<SubTexture name="run-away-like-you-always-do+0000" x="6400" y="1440" width="1280" height="720"/>
+	<SubTexture name="selfish0000" x="0" y="2160" width="1280" height="720"/>
+	<SubTexture name="selfish+0000" x="1280" y="2160" width="1280" height="720"/>
+	<SubTexture name="she-never-truly-loved-you0000" x="2560" y="2160" width="1280" height="720"/>
+	<SubTexture name="she-never-truly-loved-you+0000" x="3840" y="2160" width="1280" height="720"/>
+	<SubTexture name="she-stayed-with-you-out-of-pity0000" x="5120" y="2160" width="1280" height="720"/>
+	<SubTexture name="she-stayed-with-you-out-of-pity+0000" x="6400" y="2160" width="1280" height="720"/>
+	<SubTexture name="you-hated-them0000" x="0" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-hated-them+0000" x="1280" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-never-deserved-her0000" x="2560" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-never-deserved-her+0000" x="3840" y="2880" width="1280" height="720"/>
+	<SubTexture name="your-fault0000" x="5120" y="2880" width="1280" height="720"/>
+	<SubTexture name="your-fault+0000" x="6400" y="2880" width="1280" height="720"/>
+	<SubTexture name="you-wanted-them-to-feel-pain0000" x="0" y="3600" width="1280" height="720"/>
+	<SubTexture name="you-wanted-them-to-feel-pain+0000" x="1280" y="3600" width="1280" height="720"/>
+	<SubTexture name="blank0000" x="2560" y="3600" width="1280" height="720"/>
+</TextureAtlas>
