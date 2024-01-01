@@ -294,7 +294,7 @@ class PlayState extends MusicBeatState
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
-	public var cpuControlled:Bool = true;
+	public var cpuControlled:Bool = false;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
