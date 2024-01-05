@@ -58,6 +58,10 @@ function onStepHit()
         else
             setProperty("ERDrop", false)
         end
+
+        if ((curBeat) % 4 == 0) or ((curBeat - 142) % 16 == 0) then
+            cameraShake("camHud", 0.0035, 0.05)
+        end
     end
 
     if ((curBeat >= 399) and (curBeat < 424)) or ((curBeat >= 439) and (curBeat < 496)) then
@@ -67,6 +71,10 @@ function onStepHit()
         if ((curBeat - 410) % 8 == 0) or ((curBeat - 405) % 8 == 0) then
             setProperty("ERDrop", false)
         end
+
+        if (curBeat) % 4 == 0 then
+            cameraShake("camHud", 0.0035, 0.05)
+        end
     end
 
     if ((curBeat >= 424) and (curBeat < 440)) or ((curBeat >= 839) and (curBeat < 902)) or ((curBeat >= 551) and (curBeat < 616)) or ((curBeat >= 680) and (curBeat < 744)) then
@@ -74,6 +82,10 @@ function onStepHit()
             setProperty("ERDrop", true)
         else
             setProperty("ERDrop", false)
+        end
+
+        if (curBeat) % 2 == 0 then
+            cameraShake("camHud", 0.0035, 0.05)
         end
     end
 

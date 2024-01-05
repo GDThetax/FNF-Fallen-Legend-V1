@@ -3,13 +3,19 @@ package;
 using StringTools;
 
 class KeyShift {
+    static var directionMap:Map<String, Bool> = [
+        'L' => false,
+        'R' => true
+    ];
+
+
     static var shiftKeyArray:Array<Dynamic> = [];
     public static var defaultKeyArray:Array<Dynamic> = [];
     public static function shiftKeys(shiftCode:String, keyReference:Array<Dynamic>):Array<Dynamic> {
         var shiftCodeData:Array<String> = shiftCode.split("");
         defaultKeyArray = keyReference;
         for (i in 0...keyReference.length) {
-            shiftKeyArray.push(keyReference[applyShift(i, Std.parseInt(shiftCodeData[1]), getDirection(shiftCodeData[0]))]);
+            shiftKeyArray.push(keyReference[applyShift(i, Std.parseInt(shiftCodeData[1]), directionMap[shiftCodeData[0]])]);
         }
         return shiftKeyArray;
     }
@@ -21,7 +27,7 @@ class KeyShift {
         return key;
     }
 
-    static function getDirection(reference:String) {
+    /*static function getDirection(reference:String) {
         var retBool:Bool = false;
         switch (reference) {
             case 'L':
@@ -30,5 +36,5 @@ class KeyShift {
                 retBool = true;
         }
         return retBool;
-    }
+    }*/
 }

@@ -294,7 +294,7 @@ class PlayState extends MusicBeatState
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
-	public var cpuControlled:Bool = false;
+	public var cpuControlled:Bool = true;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
@@ -492,10 +492,11 @@ class PlayState extends MusicBeatState
 		Conductor.changeBPM(SONG.bpm);
 		trace(SONG.song);
 
-		if (SONG.song == 'insanity-virus')
+		if (SONG.song == 'insanity-virus' && TitleState.fullScreenToggle)
 		{
 			FlxG.fullscreen = false;
 			lime.app.Application.current.window.fullscreen = false;
+			lime.app.Application.current.window.maximized = true;
 		}
 
 		#if desktop
@@ -1421,6 +1422,8 @@ class PlayState extends MusicBeatState
 		duplicationGroup.add(timeTxt);
 		duplicationGroup.add(doof);
 
+		var camEffect:ShaderFilter = new ShaderFilter(cameraEffectShader); 
+
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -1471,8 +1474,8 @@ class PlayState extends MusicBeatState
 					StageSwitch.addStageToGroup("warzone");
 					StageSwitch.addStageToGroup("myworld");
 					changeStageMidway("warzone");
-					camGame.setFilters([new ShaderFilter(cameraEffectShader)]);
-					camHUD.setFilters([new ShaderFilter(cameraEffectShader)]);
+					camGame.setFilters([camEffect]);
+					camHUD.setFilters([camEffect]);
 					new FlxTimer().start(0.2, function(showWorld:FlxTimer)
 					{
 						changeStageMidway("myworld");
@@ -1521,8 +1524,8 @@ class PlayState extends MusicBeatState
 				StageSwitch.addStageToGroup("warzone");
 				StageSwitch.addStageToGroup("myworld");
 				changeStageMidway("warzone");
-				camGame.setFilters([new ShaderFilter(cameraEffectShader)]);
-				camHUD.setFilters([new ShaderFilter(cameraEffectShader)]);
+				camGame.setFilters([camEffect]);
+				camHUD.setFilters([camEffect]);
 				new FlxTimer().start(0.2, function(showWorld:FlxTimer)
 				{
 					changeStageMidway("myworld");
@@ -2321,11 +2324,11 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(IVINtroText, {alpha: 1}, 0.5, {
 									startDelay: 7.5,
 								});
-								FlxTween.tween(IVINtroText, {alpha: 0}, 1, {startDelay: 9});
+								FlxTween.tween(IVINtroText, {alpha: 0}, 1, {startDelay: 9, onComplete: destroyAsset.bind(_, IVINtroText)});
 							case 'fabula-amoris':
 								blackFadeOut = 1;
 								FlxTween.tween(IVINtroText, {alpha: 1}, 1, {startDelay: 3});
-								FlxTween.tween(IVINtroText, {alpha: 0}, 1, {startDelay: 6});
+								FlxTween.tween(IVINtroText, {alpha: 0}, 1, {startDelay: 6, onComplete: destroyAsset.bind(_, IVINtroText)});
 							default:
 								blackFadeOut = 3;
 						}
@@ -3248,10 +3251,10 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		/*if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
+		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
 		{
 			openChartEditor();
-	}*/
+	}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -4419,6 +4422,8 @@ class PlayState extends MusicBeatState
 				}
 			case '[IV] switch Stage Memory':
 				changeStageMidway(value1);
+			case '[IV] destroy Stage':
+				StageSwitch.destroyStage(value1);
 
 				// This is literally so I can easily find the events section of this code
 				// gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
@@ -5597,6 +5602,10 @@ class PlayState extends MusicBeatState
 	{
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
+
+		if (SONG.song == 'left-for-dead') {
+			camHUD.shake(0.004, 0.05);
+		}
 
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
 		{
