@@ -294,7 +294,7 @@ class PlayState extends MusicBeatState
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
 	public var instakillOnMiss:Bool = false;
-	public var cpuControlled:Bool = true;
+	public var cpuControlled:Bool = false;
 	public var practiceMode:Bool = false;
 
 	public var botplaySine:Float = 0;
@@ -3256,10 +3256,10 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
+		/*if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
 		{
 			openChartEditor();
-	}
+		}*/
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
