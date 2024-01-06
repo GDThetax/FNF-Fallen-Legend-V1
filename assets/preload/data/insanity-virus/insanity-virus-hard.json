@@ -22821,7 +22821,7 @@
 					[
 						"[IV] Toggle Camera Effect Status",
 						"1",
-						""
+						"1"
 					],
 					[
 						"[IV] Flash Virus",
@@ -24595,19 +24595,6 @@
 				null
 			],
 			[
-				255000,
-				[
-					[
-						"[IV] destroy Stage",
-						"warzone",
-						""
-					]
-				],
-				null,
-				null,
-				null
-			],
-			[
 				255206.896551724,
 				[
 					[
@@ -26300,19 +26287,6 @@
 					[
 						"[COM] Flash Screen",
 						"1",
-						""
-					]
-				],
-				null,
-				null,
-				null
-			],
-			[
-				308068.965517241,
-				[
-					[
-						"[IV] destroy Stage",
-						"myworld",
 						""
 					]
 				],

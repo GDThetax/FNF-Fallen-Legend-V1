@@ -68,9 +68,9 @@ class Virus extends FlxSprite
 
 		removeTMR = new FlxTimer();
 
-		if (TitleState.fullScreenToggle)
+		if (TitleState.fullScreenToggle || !ClientPrefs.virusEffect)
 			toggleFullscreenFlash = false;
-		if (PlayState.SONG.song == 'insanity-virus')
+		if (PlayState.SONG.song == 'insanity-virus' && ClientPrefs.virusEffect)
 			toggleFullscreenFlash = true;
 
 		switch (formatToFileFormat(song))
@@ -141,14 +141,12 @@ class Virus extends FlxSprite
 					case 1:
 						animation.play('body');
 					case 2:
-						if (toggleFullscreenFlash)
-							lime.app.Application.current.window.fullscreen = true;
+						lime.app.Application.current.window.fullscreen = true;
 						flashSFX.play(true);
 					case 3:
 						alpha = 0;
 						flashSFX.stop();
 						flashSFX.destroy();
-						if (toggleFullscreenFlash)
 							lime.app.Application.current.window.fullscreen = false;
 					default:
 				}

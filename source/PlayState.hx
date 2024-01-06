@@ -1383,6 +1383,7 @@ class PlayState extends MusicBeatState
 		memoryMessage.camera = camHUD;
 		memoryMessage.alpha = 0.0001;
 		memoryMessage.y = botplayTxt.y + 5;
+		if (ClientPrefs.middleScroll) memoryMessage.y += 25;
 		add(memoryMessage);
 
 		strumLineNotes.cameras = [camHUD];
@@ -2558,7 +2559,7 @@ class PlayState extends MusicBeatState
 					oldNote = null;
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 
-				if (swagNote.noteType == 'saw note' || swagNote.noteType == 'grabNote')
+				if (swagNote.noteType == 'saw note' || swagNote.noteType == 'grab Note')
 				{
 					swagNote.strumTime *= 2;
 				}
@@ -2623,6 +2624,10 @@ class PlayState extends MusicBeatState
 				}
 				if (swagNote.noteType == 'grab Note')
 					swagNote.noteData = swagNote.slideID;
+
+				if ((swagNote.noteType == 'grab Note' || swagNote.noteType == 'saw note') && ClientPrefs.middleScroll) {
+					swagNote.x += 278;
+				}
 			}
 			daBeats += 1;
 		}
@@ -4383,6 +4388,12 @@ class PlayState extends MusicBeatState
 					camGame.setFilters([]);
 					camHUD.setFilters([]);
 				}
+				if (value2 == '1') {
+					lime.app.Application.current.window.fullscreen = true;
+					new FlxTimer().start(0.05, function(returnTo:FlxTimer) {
+						lime.app.Application.current.window.fullscreen = false;
+					});
+				}
 			case '[FA] change black cover opacity':
 				var valuesArray:Array<String> = [value1, value2];
 
@@ -4422,8 +4433,6 @@ class PlayState extends MusicBeatState
 				}
 			case '[IV] switch Stage Memory':
 				changeStageMidway(value1);
-			case '[IV] destroy Stage':
-				StageSwitch.destroyStage(value1);
 
 				// This is literally so I can easily find the events section of this code
 				// gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg

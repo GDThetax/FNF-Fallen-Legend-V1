@@ -119,7 +119,6 @@ class ChartingState extends MusicBeatState
 		['[IV] Body Transition', "Value 1: phase"],
 		['[IV] knife Transition', "Value 1: phase (set 2 to remove)"],
 		['[IV] scratch effect', "Value 1: toggle on\nValue 2: anim to play"],
-		['[IV] destroy Stage', 'value 1: stage to destroy to save memory'],
 		['[ST] display error message', 'Value 1: number of lines to add'],
 		['[IV] Shift Keybinds', 'Value 1: direction code (e.g: R2)'],
 		['[ER] Toggle colour pulses', 'Value 1: toggle state'],

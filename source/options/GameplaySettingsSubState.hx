@@ -49,12 +49,19 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			false); //Default value
 		addOption(option);
 
-		/*var option:Option = new Option('Middlescroll',
+		var option:Option = new Option('Virus Effect', //Name
+		'If disabled, virus flashes do not go fullscreen, good for performance\nit is recommended to keep this on for best experience', //Description
+		'virusEffect', //Save data variable name
+		'bool', //Variable type
+		true); //Default value
+		addOption(option);
+
+		var option:Option = new Option('Middlescroll',
 			'If checked, your notes get centered.',
 			'middleScroll',
 			'bool',
 			false);
-		addOption(option);*/
+		addOption(option);
 
 		var option:Option = new Option('Ghost Tapping',
 			"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",

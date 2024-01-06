@@ -76,29 +76,6 @@ class StageSwitch
 		});
 	}
 
-	public static function destroyStage(stageToDestroy:String) {
-		switch(stageToDestroy) {
-			case "warzone":
-				PlayState.stageSwitchBackgroundGroup.remove(backGround);
-				PlayState.stageSwitchBackgroundGroup.remove(middleGround);
-				PlayState.stageSwitchOverlayGroup.remove(foreGround);
-				backGround.destroy();
-				middleGround.destroy();
-				foreGround.destroy();
-			case "myworld":
-				PlayState.stageSwitchBackgroundGroup.remove(skyline);
-				PlayState.stageSwitchBackgroundGroup.remove(screenBack);
-				PlayState.stageSwitchBackgroundGroup.remove(buildings);
-				PlayState.stageSwitchBackgroundGroup.remove(signPost);
-				PlayState.stageSwitchOverlayGroup.remove(shadingOverlay);
-				skyline.destroy();
-				screenBack.destroy();
-				buildings.destroy();
-				signPost.destroy();
-				shadingOverlay.destroy();
-		}
-	}
-
 	public static function showStage(stageToShow:String)
 	{
 		newStageData = StageData.getStageFile(stageToShow, true);

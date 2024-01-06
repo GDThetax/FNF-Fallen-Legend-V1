@@ -153,7 +153,7 @@ class CommandPrompt extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed / 2);
+		super.update(elapsed);
 
 		if (this.countdownDisp != -1 && FlxG.keys.anyJustPressed(finalResetKey))
 		{

@@ -101,7 +101,7 @@ class TraClaw extends FlxSprite
 		// if (this.clawVariant == 'saw distraction' && trackedNote == null)
 		//	return;
 
-		super.update(elapsed / 2);
+		super.update(elapsed);
 	}
 
 	function setSawData()
