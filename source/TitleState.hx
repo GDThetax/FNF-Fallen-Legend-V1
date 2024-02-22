@@ -437,8 +437,9 @@ class TitleState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.F)
 		{
-			FlxG.fullscreen ? FlxG.fullscreen = false : FlxG.fullscreen = true;
+			FlxG.fullscreen = !FlxG.fullscreen;
 			fullScreenToggle = !fullScreenToggle;
+			FlxG.save.data.fullscreen = FlxG.fullscreen;
 		}
 	
 
